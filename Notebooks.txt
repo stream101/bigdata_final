@@ -1,0 +1,6 @@
+1. Data filtering
+http://nbviewer.ipython.org/github/stream101/bigdata_final/blob/master/NCDC%20data%20filtering.ipynb
+
+2. Global trend
+http://nbviewer.ipython.org/github/stream101/bigdata_final/blob/master/02_Global_Trend.ipynb
+
