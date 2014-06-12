@@ -4,3 +4,5 @@ http://nbviewer.ipython.org/github/stream101/bigdata_final/blob/master/NCDC%20da
 2. Global trend
 http://nbviewer.ipython.org/github/stream101/bigdata_final/blob/master/02_Global_Trend.ipynb
 
+3. US weather 1956-2005
+http://nbviewer.ipython.org/github/stream101/bigdata_final/blob/master/US_weather.ipynb
