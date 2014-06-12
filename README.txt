@@ -5,8 +5,8 @@ http://nbviewer.ipython.org/github/stream101/bigdata_final/blob/master/NCDC%20da
 2. Global trend
 http://nbviewer.ipython.org/github/stream101/bigdata_final/blob/master/02_Global_Trend.ipynb
 
-3. US weather 1930-2008
-http://nbviewer.ipython.org/github/stream101/bigdata_final/blob/master/US_weather.ipynb
+3. US weather 1930-2008 and Beijing weather 1976-2008
+http://nbviewer.ipython.org/github/stream101/bigdata_final/blob/master/US_Beijing_weather.ipynb
 
 
 #########################  Available data  ######################
