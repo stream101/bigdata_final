@@ -49,8 +49,9 @@ class MRWeather(MRJob):
         out = (year, (mean_temp, max_temp, min_temp, visible))
         #out = (year, min_temp)
         #if mean_temp != 9999.9 and max_temp != 9999.9 and min_temp != 9999.9 and visible != 999.9:
-        if year in self.valid_stations[str(elements[0])]:
-            yield out
+        if str(elements[0]) in self.valid_stations:
+            if year in self.valid_stations[str(elements[0])]:
+                yield out
 
         
     def reducer(self, station, info):
@@ -69,6 +70,5 @@ class MRWeather(MRJob):
             visible_sum = visible_sum + info_list[i][3]
         yield(station, (mean_sum/num, max_sum/num, min_sum/num, visible_sum/num))    
      
-    
 if __name__ == '__main__':
     MRWeather.run()
