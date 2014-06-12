@@ -62,13 +62,25 @@ class MRWeather(MRJob):
         min_sum = 0.0
         mean_sum = 0.0
         visible_sum = 0.0
+        max_cnt = 0
+        min_cnt = 0
+        mean_cnt = 0
+        visible_cnt = 0
         num = len(info_list)
         for i in range(0, num):
-            mean_sum = mean_sum + info_list[i][0]
-            max_sum = max_sum + info_list[i][1]
-            min_sum = min_sum + info_list[i][2]
-            visible_sum = visible_sum + info_list[i][3]
-        yield(station, (mean_sum/num, max_sum/num, min_sum/num, visible_sum/num))    
+            if info_list[i][0] != 9999.9:
+                mean_sum = mean_sum + info_list[i][0]
+                mean_cnt = mean_cnt + 1
+            if info_list[i][1] != 9999.9:
+                max_sum = max_sum + info_list[i][1]
+                max_cnt = max_cnt + 1
+            if info_list[i][2] != 9999.9:
+                min_sum = min_sum + info_list[i][2]
+                min_cnt = min_cnt + 1
+            if info_list[i][3] != 999.9:
+                visible_sum = visible_sum + info_list[i][3]
+                visible_cnt = visible_cnt + 1
+        yield(station, (mean_sum/mean_cnt, max_sum/max_cnt, min_sum/min_cnt, visible_sum/visible_cnt))    
      
 if __name__ == '__main__':
     MRWeather.run()
